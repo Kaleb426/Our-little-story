@@ -1,0 +1,333 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background: #101010;
+
+    color:white;
+
+    font-family: Cambria, "Cambria Math", Georgia, serif;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    padding:40px 20px;
+
+}
+
+
+#scene1{
+
+    text-align:center;
+
+    width:90%;
+
+    max-width:500px;
+
+    padding-top:40px;
+
+}
+
+#photo{
+
+    width:320px;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    display:block;
+
+    margin:0 auto 40px auto;
+
+    opacity:0;
+
+    transition:opacity 20s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.6);
+
+}
+
+#text{
+
+    margin:40px auto 0;
+
+    max-width:620px;
+
+    min-height:140px;
+
+    font-size:30px;
+
+    line-height:1.6;
+
+    white-space:pre-line;
+
+    font-style:italic;
+
+    transition:opacity .8s ease;
+
+}
+
+#startButton{
+
+    display:none;
+
+    margin-top:-37px;
+
+    padding:15px 35px;
+
+    font-size:20px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+}
+
+.fade-out{
+
+    opacity:0;
+
+    transition:opacity 1.5s ease;
+
+}
+
+#letter{
+
+    display:none;
+
+    opacity:0;
+
+    color:white;
+
+    width:min(650px,90%);
+
+    margin:0 auto;
+
+    padding-top:50px;
+
+    text-align:left;
+
+    line-height:1.6;
+
+    font-size:27px;
+
+    font-family:Georgia, serif;
+
+    white-space:pre-line;
+
+    transition:opacity .9s ease;
+
+}
+
+#proposalButtons{
+
+    display:none;
+
+    opacity:1;
+
+    margin-top:50px;
+
+    text-align:center;
+
+}
+
+#proposalButtons button{
+
+    font-family:Georgia, serif;
+
+    font-size:20px;
+
+    padding:14px 30px;
+
+    margin:0 12px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:
+
+        opacity .6s,
+
+        transform .4s,
+
+        background .3s;
+
+}
+#yesBtn{
+
+    background:#ff4d6d;
+
+    color:white;
+
+    box-shadow:0 5px 18px rgba(255,77,109,.35);
+
+}
+
+#noBtn{
+
+    background:#3b3b3b;
+
+    color:white;
+
+}
+
+
+#proposalButtons button:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   PROPOSAL SCENE
+=========================== */
+
+.proposal-mode{
+
+    font-style: italic;
+
+    font-size: 34px;
+
+    line-height: 1.6;
+
+    padding-top: 80px;
+
+}
+
+.proposal-box{
+
+    width:min(420px,90%);
+
+    margin:100px auto 0;
+
+    text-align:left;
+
+}
+
+#proposalButtons{
+
+    transition:opacity .8s;
+
+}
+
+
+.proposal-box{
+
+    max-width:420px;
+
+    margin:auto;
+
+    text-align:left;
+
+}
+
+@media (max-width:600px){
+
+    #photo{
+
+        width:260px;
+        height:260px;
+
+    }
+
+    #text{
+
+        font-size:24px;
+        line-height:1.6;
+        min-height:120px;
+
+    }
+
+    #letter{
+
+        width:92%;
+        font-size:21px;
+        line-height:1.7;
+        padding-top:30px;
+
+    }
+
+    .proposal-box{
+
+        width:90%;
+        margin:70px auto 0;
+        font-size:30px;
+        line-height:1.6;
+
+    }
+
+    #proposalButtons{
+
+        margin-top:45px;
+
+    }
+
+    #proposalButtons button{
+
+        font-size:18px;
+        padding:14px 24px;
+        margin:8px;
+
+    }
+
+}
+
+/* ===========================
+   LETTER CURSOR
+=========================== */
+
+.cursor{
+
+    display:inline-block;
+
+    width:2px;
+
+    height:1em;
+
+    background:white;
+
+    margin-left:2px;
+
+    vertical-align:middle;
+
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}
+
+.story-center{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:90%;
+    margin:0;
+}
